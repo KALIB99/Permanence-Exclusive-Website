@@ -130,41 +130,6 @@ a:hover > .arrow-icon, button:hover > .arrow-icon { transform: translate(2px, -2
 .nav-book span, .button span, .estimate-button span, .manual-quote a span { margin-left: 10px; transition: transform 0.2s ease; }
 .nav-book:hover span, .button:hover span { transform: translateX(3px); }
 
-/* Status Bar & Arizona Time Ticker */
-.status-bar {
-  background: #111114;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-  color: rgba(255, 255, 255, 0.65);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  padding: 8px 5vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 92px;
-}
-.status-bar-live {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: #a3e635;
-  font-weight: 500;
-}
-.status-pulse {
-  width: 7px;
-  height: 7px;
-  background: #84cc16;
-  border-radius: 50%;
-  display: inline-block;
-  box-shadow: 0 0 10px #84cc16;
-  animation: pulse 2s infinite;
-}
-@keyframes pulse {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(132, 204, 22, 0.7); }
-  70% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(132, 204, 22, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(132, 204, 22, 0); }
-}
-
 /* Hero Section */
 .hero {
   background: var(--ink);
@@ -174,6 +139,7 @@ a:hover > .arrow-icon, button:hover > .arrow-icon { transform: translate(2px, -2
   position: relative;
   display: flex;
   align-items: center;
+  padding-top: 92px;
 }
 .hero-image {
   background: url("/og.png") center/cover no-repeat;
@@ -385,7 +351,6 @@ h1 em, h2 em, .manifesto-copy em { color: var(--gold-light); font-style: italic;
   50% { transform: translateY(-8px); }
 }
 
-.status-live-short,
 .eyebrow-short { display: none; }
 
 @media (max-width: 1080px) {
@@ -394,11 +359,8 @@ h1 em, h2 em, .manifesto-copy em { color: var(--gold-light); font-style: italic;
 @media (max-width: 900px) {
   .hero-quick-bar { flex-direction: column; align-items: stretch; }
   .hero-quick-divider { display: none; }
-  .status-live-full,
   .eyebrow-full { display: none; }
-  .status-live-short,
   .eyebrow-short { display: inline; }
-  .status-bar-time { display: none; }
 }
 @media (max-width: 600px) {
   .hero-quick-submit { width: 100%; text-align: center; }
@@ -1351,16 +1313,9 @@ footer > div > strong { color: var(--ivory); font-size: 10px; font-weight: 700; 
   .wordmark strong { font-size: 16px; }
   .wordmark span { font-size: 7px; margin-top: 4px; letter-spacing: 0.4em; }
 
-  .status-bar {
-    margin-top: 64px;
-    padding: 7px 16px;
-    justify-content: center;
-  }
-  .status-bar-live { font-size: 10px; }
-
   .hero {
     min-height: auto;
-    padding: 28px 0 48px;
+    padding: 76px 0 48px;
     align-items: flex-start;
   }
   .hero-content {

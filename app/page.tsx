@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -102,25 +102,7 @@ export default function Home() {
   const [bookDropoff, setBookDropoff] = useState<string | null>(null);
   const [heroPickup, setHeroPickup] = useState<string>("");
   const [heroDropoff, setHeroDropoff] = useState<string>("");
-  const [localTime, setLocalTime] = useState<string>("");
   const [heroError, setHeroError] = useState<string>("");
-
-  useEffect(() => {
-    function updateClock() {
-      const now = new Date();
-      const options: Intl.DateTimeFormatOptions = {
-        timeZone: "America/Phoenix",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: true,
-      };
-      setLocalTime(new Intl.DateTimeFormat("en-US", options).format(now));
-    }
-    updateClock();
-    const interval = setInterval(updateClock, 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   useGSAP(() => {
     const mm = gsap.matchMedia();
@@ -208,18 +190,6 @@ export default function Home() {
         </nav>
         <a className="nav-book" href="#book">Book Your Ride <Arrow /></a>
       </header>
-
-      {/* Live Arizona Status Bar */}
-      <div className="status-bar" aria-label="Valley Service Status">
-        <span className="status-bar-live">
-          <i className="status-pulse" aria-hidden="true" />
-          <span className="status-live-full">Chauffeurs Active Across Arizona Valley</span>
-          <span className="status-live-short">Valley chauffeurs active</span>
-        </span>
-        <span className="status-bar-time">
-          Phoenix Local Time: <strong>{localTime || "—"}</strong> · Sky Harbor (PHX) Dispatch Open
-        </span>
-      </div>
 
       <section className="hero" id="top">
         <div className="hero-image" aria-hidden="true" />
