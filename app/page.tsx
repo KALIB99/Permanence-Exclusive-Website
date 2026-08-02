@@ -213,9 +213,10 @@ export default function Home() {
       <div className="status-bar" aria-label="Valley Service Status">
         <span className="status-bar-live">
           <i className="status-pulse" aria-hidden="true" />
-          Chauffeurs Active Across Arizona Valley
+          <span className="status-live-full">Chauffeurs Active Across Arizona Valley</span>
+          <span className="status-live-short">Valley chauffeurs active</span>
         </span>
-        <span>
+        <span className="status-bar-time">
           Phoenix Local Time: <strong>{localTime || "—"}</strong> · Sky Harbor (PHX) Dispatch Open
         </span>
       </div>
@@ -225,7 +226,10 @@ export default function Home() {
         <div className="hero-shade" aria-hidden="true" />
 
         <div className="hero-content">
-          <p className="eyebrow">Private Chauffeur Service · Arizona Valley</p>
+          <p className="eyebrow">
+            <span className="eyebrow-full">Private Chauffeur Service · Arizona Valley</span>
+            <span className="eyebrow-short">Private Chauffeur · Arizona</span>
+          </p>
           <h1>
             <span className="hero-line">Your journey.</span><br />
             <span className="hero-line"><em>Elevated.</em></span>
@@ -484,7 +488,11 @@ export default function Home() {
         <p className="copyright">© 2026 Permanence Exclusive · Private prearranged executive transportation</p>
       </footer>
 
-      <a className="mobile-book" href="#book">Book Your Chauffeur <Arrow /></a>
+      <a className="mobile-book" href="#book">
+        <span className="mobile-book-full">Book Your Chauffeur</span>
+        <span className="mobile-book-short">Book Now</span>
+        <Arrow />
+      </a>
     </main>
   );
 }
