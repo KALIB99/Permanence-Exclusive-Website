@@ -41,29 +41,29 @@ const valleyDestinations = [
 
 const chauffeurs = [
   {
-    name: "Marcus Vance",
+    name: "Marshal Matimba",
     role: "Senior Executive Chauffeur",
-    experience: "14+ Years in Phoenix & Scottsdale",
+    experience: "11+ Years in Phoenix & Scottsdale",
     certification: "Defensive Driving & First Aid Certified",
     bio: "Specializing in corporate executive transport and PHX airport arrivals. Fluent in English and Spanish with extensive knowledge of private resorts and Valley shortcuts.",
     initials: "MV",
   },
-  {
-    name: "Sophia Reyes",
-    role: "Airport & Private Event Specialist",
-    experience: "10+ Years Executive Chauffeur Service",
-    certification: "Terminal Flight Tracking & VIP Protocol",
-    bio: "Renowned for flawless punctuality and serene cabin atmosphere during early morning airport transfers and high-profile evening galas.",
-    initials: "SR",
-  },
-  {
-    name: "David Sterling",
-    role: "Statewide & Hourly Charter Specialist",
-    experience: "12+ Years Long-Distance Charter",
-    certification: "Advanced Mountain & Highway Navigation",
-    bio: "Expert in long-distance Arizona charters (Sedona, Tucson, Grand Canyon) and multi-stop corporate agendas across the Valley.",
-    initials: "DS",
-  },
+  // {
+  //   name: "Sophia Reyes",
+  //   role: "Airport & Private Event Specialist",
+  //   experience: "10+ Years Executive Chauffeur Service",
+  //   certification: "Terminal Flight Tracking & VIP Protocol",
+  //   bio: "Renowned for flawless punctuality and serene cabin atmosphere during early morning airport transfers and high-profile evening galas.",
+  //   initials: "SR",
+  // },
+  // {
+  //   name: "David Sterling",
+  //   role: "Statewide & Hourly Charter Specialist",
+  //   experience: "12+ Years Long-Distance Charter",
+  //   certification: "Advanced Mountain & Highway Navigation",
+  //   bio: "Expert in long-distance Arizona charters (Sedona, Tucson, Grand Canyon) and multi-stop corporate agendas across the Valley.",
+  //   initials: "DS",
+  // },
 ];
 
 const clientReviews = [
