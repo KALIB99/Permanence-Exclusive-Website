@@ -446,8 +446,19 @@ export default function BookingFlow({
           durationMinutes: estimate?.durationMinutes,
         }),
       });
-      const data = await response.json();
+      const raw = await response.text();
+      let data: {
+        error?: string;
+        booking?: { reference: string };
+        confirmation?: { message?: string; emailHint?: string };
+      } = {};
+      try {
+        data = raw ? (JSON.parse(raw) as typeof data) : {};
+      } catch {
+        throw new Error("Reservation could not be processed. Please try again.");
+      }
       if (!response.ok) throw new Error(data.error || "Reservation could not be processed");
+      if (!data.booking?.reference) throw new Error("Reservation could not be processed");
       setConfirmation({
         reference: data.booking.reference,
         message: data.confirmation?.message ?? "Your chauffeur reservation is confirmed with our executive dispatch.",
